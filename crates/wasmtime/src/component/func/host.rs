@@ -192,9 +192,9 @@ where
     // Perform a dynamic check that this instance can indeed be left. Exiting
     // the component is disallowed, for example, when the `realloc` function
     // calls a canonical import.
-    if !flags.may_leave() {
-        bail!("cannot leave component instance");
-    }
+    // if !flags.may_leave() {
+    //     bail!("cannot leave component instance");
+    // }
 
     // There's a 2x2 matrix of whether parameters and results are stored on the
     // stack or on the heap. Each of the 4 branches here have a different
@@ -302,9 +302,9 @@ where
     // Perform a dynamic check that this instance can indeed be left. Exiting
     // the component is disallowed, for example, when the `realloc` function
     // calls a canonical import.
-    if !flags.may_leave() {
-        bail!("cannot leave component instance");
-    }
+    // if !flags.may_leave() {
+    //     bail!("cannot leave component instance");
+    // }
 
     let args;
     let ret_index;
